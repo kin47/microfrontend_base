@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/flutter_core_module/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/flutter_core_module/build" />
+      <excludeFolder url="file://$MODULE_DIR$/flutter_core_module/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/flutter_libraries_module/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/flutter_libraries_module/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/flutter_libraries_module/build" />
+      <excludeFolder url="file://$MODULE_DIR$/man_module/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/man_module/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/man_module/build" />
+      <excludeFolder url="file://$MODULE_DIR$/pom_module/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/pom_module/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/pom_module/build" />
+      <excludeFolder url="file://$MODULE_DIR$/printer_module/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/printer_module/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/printer_module/build" />
+      <excludeFolder url="file://$MODULE_DIR$/ui_design_system/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/ui_design_system/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/ui_design_system/build" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

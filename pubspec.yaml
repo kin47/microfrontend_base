@@ -1,0 +1,7 @@
+name: microfrontend_base
+description: Microfrontend base project (Using monorepo)
+
+environment:
+  sdk: ^3.9.2
+dependencies:
+  melos: ^7.3.0

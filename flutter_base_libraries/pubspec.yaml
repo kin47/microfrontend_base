@@ -1,0 +1,51 @@
+name: flutter_base_libraries
+description: "A module that contains all the Flutter libraries in need for this Flutter Project"
+publish_to: none
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.9.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  flutter_bloc: ^9.1.1
+  retrofit: ^4.9.1
+  dio: ^5.9.0
+  freezed: ^3.2.3
+  injectable: ^2.7.0
+  dartz: ^0.10.1
+  shared_preferences: ^2.5.3
+  flutter_secure_storage: ^9.2.4
+  event_bus: ^2.0.1
+  get_it: ^9.1.1
+  connectivity_plus: ^7.0.0
+  cached_network_image: ^3.4.1
+  shimmer: ^3.0.0
+  flutter_gen: ^5.12.0
+  flutter_screenutil: ^5.9.3
+  equatable: ^2.0.7
+  intl: ^0.20.2
+  isar: ^3.1.0+1
+  isar_flutter_libs: ^3.1.0+1
+  path_provider: ^2.1.5
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+  retrofit_generator: ^10.2.0
+  chucker_flutter: ^1.9.0
+  freezed_annotation: ^3.1.0
+  injectable_generator: ^2.9.1
+  build_runner: ^2.10.4
+  json_serializable: ^6.11.2
+
+flutter:
+  uses-material-design: true
+  module:
+    androidX: true
+    androidPackage: com.example.flutter_base_libraries
+    iosBundleIdentifier: com.example.flutterBaseLibraries

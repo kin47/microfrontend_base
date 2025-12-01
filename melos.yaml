@@ -1,0 +1,62 @@
+name: microfrontend_base
+
+packages:
+  - flutter_libraries_module
+  - flutter_core_module
+  - ui_design_system
+  - pom_module
+  - man_module
+  - printer_module
+
+scripts:
+  ios:
+    description: Setup IOS before build
+    run: melos bootstrap && melos run ios_pod_install
+
+  android:
+    description: Setup android before build release
+    run: melos bootstrap
+
+  ios_pod_install:
+    description: Run pod install on ios
+    run: cd microfrontend_ios && pod install
+
+  # android_build_aar_release:
+  #   description: Build android aar for release
+  #   run: bash retail_man_flutter/update_android.sh && cd retail_man_flutter && flutter build aar --no-profile --no-tree-shake-icons --no-debug --output "${PWD}/../kiotviet_android_manager/flutter-plugins"
+
+  # android_build_aar_development:
+  #   description: Build android aar for development
+  #   run: bash retail_man_flutter/update_android.sh && cd retail_man_flutter && flutter build aar --no-release --no-profile --no-tree-shake-icons --output "${PWD}/../kiotviet_android_manager/flutter-plugins"
+
+  flutter_pub_get:
+    description: Run flutter pub get on retail_man_flutter
+    run: cd retail_man_flutter && flutter pub get
+
+  flutter_clean:
+    description: Runs "flutter clean" in all Flutter packages
+    run: melos exec -- flutter clean
+  
+  delete_file_pub_override:
+    description: delete all file pubspec_overrides.yaml in modules
+    run: melos exec -- "[ -f pubspec_overrides.yaml ] && rm pubspec_overrides.yaml || echo "File does not exist""
+  
+  generate_code_flutter:
+    description: Generate flutter code script # tạm thời chưa dùng đến
+    run: melos exec --ignore="*font_awesome_flutter*" --ignore="*mobile_scanner*" --ignore="*work_manager*" --fail-fast -- flutter pub run build_runner build --delete-conflicting-outputs
+
+  generate_multiple_language_flutter:
+    description: Generate flutter code script # tạm thời chưa dùng đến
+    run: melos exec --ignore="*mobile_scanner*" --ignore="*business_intelligence*" --ignore="font_awesome_flutter" --fail-fast -- flutter gen-l10n
+
+  pub_get_infra:
+    description: run pub get on Infra
+    run: cd retail_man_flutter && flutter pub get
+
+ide:
+  intellij:
+    enabled: false
+
+command:
+  bootstrap:
+    runPubGetInParallel: false

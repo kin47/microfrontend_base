@@ -1,0 +1,26 @@
+import 'package:freezed_annotation/freezed_annotation.dart';
+
+part 'base_list_data.g.dart';
+
+@JsonSerializable(
+  genericArgumentFactories: true,
+  anyMap: true,
+  explicitToJson: true,
+)
+class BaseListData<T> {
+  BaseListData({this.data, this.status});
+
+  factory BaseListData.fromJson(
+      Map<String, dynamic> json,
+      T Function(Object? json) fromJsonT,
+      ) =>
+      _$BaseListDataFromJson(json, fromJsonT);
+
+  Map<String, dynamic> toJson(Object? Function(T value) toJsonT) =>
+      _$BaseListDataToJson(this, toJsonT);
+
+  @JsonKey(name: 'data')
+  List<T>? data;
+  @JsonKey(name: 'status')
+  int? status;
+}
