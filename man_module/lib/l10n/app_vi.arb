@@ -1,0 +1,14 @@
+{
+  "@@locale": "vi",
+  "appTitle": "Mô-đun Quản lý",
+  "hello": "Xin chào",
+  "welcome": "Chào mừng",
+  "more": "Thêm",
+  "changeLanguage": "Đổi ngôn ngữ",
+  "logout": "Đăng xuất",
+  "selectLanguage": "Chọn ngôn ngữ",
+  "english": "Tiếng Anh",
+  "vietnamese": "Tiếng Việt",
+  "japanese": "Tiếng Nhật"
+}
+

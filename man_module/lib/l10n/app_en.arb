@@ -1,0 +1,44 @@
+{
+  "@@locale": "en",
+  "appTitle": "Man Module",
+  "@appTitle": {
+    "description": "The title of the application"
+  },
+  "hello": "Hello",
+  "@hello": {
+    "description": "A greeting"
+  },
+  "welcome": "Welcome",
+  "@welcome": {
+    "description": "A welcome message"
+  },
+  "more": "More",
+  "@more": {
+    "description": "More screen title"
+  },
+  "changeLanguage": "Change Language",
+  "@changeLanguage": {
+    "description": "Change language button text"
+  },
+  "logout": "Logout",
+  "@logout": {
+    "description": "Logout button text"
+  },
+  "selectLanguage": "Select Language",
+  "@selectLanguage": {
+    "description": "Select language dialog title"
+  },
+  "english": "English",
+  "@english": {
+    "description": "English language name"
+  },
+  "vietnamese": "Vietnamese",
+  "@vietnamese": {
+    "description": "Vietnamese language name"
+  },
+  "japanese": "Japanese",
+  "@japanese": {
+    "description": "Japanese language name"
+  }
+}
+
