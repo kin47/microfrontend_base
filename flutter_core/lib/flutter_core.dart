@@ -5,3 +5,8 @@ export 'package:flutter_core/src/model/response/base_data.dart';
 export 'package:flutter_core/src/model/response/base_list_data.dart';
 export 'package:flutter_core/src/storage/local_storage/shared_preferences_helper.dart';
 export 'package:flutter_core/src/storage/secure_storage/secure_storage_helper.dart';
+export 'package:flutter_core/src/logger/base_logger.dart';
+export 'package:flutter_core/src/logger/base_debug_console_operator.dart';
+export 'package:flutter_core/src/route/base_application_route.dart';
+export 'package:flutter_core/src/route/base_route_resolver.dart';
+export 'package:flutter_core/src/module_definition/base_application_module.dart';
