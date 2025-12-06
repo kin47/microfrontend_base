@@ -1,0 +1,1 @@
+export 'package:ui_design_system/text_style/app_text_styles.dart';

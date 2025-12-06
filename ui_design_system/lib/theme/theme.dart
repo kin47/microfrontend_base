@@ -1,0 +1,1 @@
+export 'package:ui_design_system/theme/app_colors.dart';
