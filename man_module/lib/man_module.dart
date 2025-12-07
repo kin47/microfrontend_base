@@ -1,0 +1,1 @@
+export 'package:man_module/external/man_module.dart';

@@ -14,7 +14,7 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$MoreViewModel {
 
- String? get name;
+ String? get name; String get currentLocaleCode;
 /// Create a copy of MoreViewModel
 /// with the given fields replaced by the non-null parameter values.
 @JsonKey(includeFromJson: false, includeToJson: false)
@@ -25,16 +25,16 @@ $MoreViewModelCopyWith<MoreViewModel> get copyWith => _$MoreViewModelCopyWithImp
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is MoreViewModel&&(identical(other.name, name) || other.name == name));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is MoreViewModel&&(identical(other.name, name) || other.name == name)&&(identical(other.currentLocaleCode, currentLocaleCode) || other.currentLocaleCode == currentLocaleCode));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,name);
+int get hashCode => Object.hash(runtimeType,name,currentLocaleCode);
 
 @override
 String toString() {
-  return 'MoreViewModel(name: $name)';
+  return 'MoreViewModel(name: $name, currentLocaleCode: $currentLocaleCode)';
 }
 
 
@@ -45,7 +45,7 @@ abstract mixin class $MoreViewModelCopyWith<$Res>  {
   factory $MoreViewModelCopyWith(MoreViewModel value, $Res Function(MoreViewModel) _then) = _$MoreViewModelCopyWithImpl;
 @useResult
 $Res call({
- String? name
+ String? name, String currentLocaleCode
 });
 
 
@@ -62,10 +62,11 @@ class _$MoreViewModelCopyWithImpl<$Res>
 
 /// Create a copy of MoreViewModel
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? name = freezed,}) {
+@pragma('vm:prefer-inline') @override $Res call({Object? name = freezed,Object? currentLocaleCode = null,}) {
   return _then(_self.copyWith(
 name: freezed == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
-as String?,
+as String?,currentLocaleCode: null == currentLocaleCode ? _self.currentLocaleCode : currentLocaleCode // ignore: cast_nullable_to_non_nullable
+as String,
   ));
 }
 
@@ -150,10 +151,10 @@ return $default(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String? name)?  $default,{required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String? name,  String currentLocaleCode)?  $default,{required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case _MoreViewModel() when $default != null:
-return $default(_that.name);case _:
+return $default(_that.name,_that.currentLocaleCode);case _:
   return orElse();
 
 }
@@ -171,10 +172,10 @@ return $default(_that.name);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String? name)  $default,) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String? name,  String currentLocaleCode)  $default,) {final _that = this;
 switch (_that) {
 case _MoreViewModel():
-return $default(_that.name);case _:
+return $default(_that.name,_that.currentLocaleCode);case _:
   throw StateError('Unexpected subclass');
 
 }
@@ -191,10 +192,10 @@ return $default(_that.name);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String? name)?  $default,) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String? name,  String currentLocaleCode)?  $default,) {final _that = this;
 switch (_that) {
 case _MoreViewModel() when $default != null:
-return $default(_that.name);case _:
+return $default(_that.name,_that.currentLocaleCode);case _:
   return null;
 
 }
@@ -206,10 +207,11 @@ return $default(_that.name);case _:
 
 
 class _MoreViewModel extends MoreViewModel {
-  const _MoreViewModel({this.name = ''}): super._();
+  const _MoreViewModel({this.name = '', this.currentLocaleCode = 'en'}): super._();
   
 
 @override@JsonKey() final  String? name;
+@override@JsonKey() final  String currentLocaleCode;
 
 /// Create a copy of MoreViewModel
 /// with the given fields replaced by the non-null parameter values.
@@ -221,16 +223,16 @@ _$MoreViewModelCopyWith<_MoreViewModel> get copyWith => __$MoreViewModelCopyWith
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _MoreViewModel&&(identical(other.name, name) || other.name == name));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _MoreViewModel&&(identical(other.name, name) || other.name == name)&&(identical(other.currentLocaleCode, currentLocaleCode) || other.currentLocaleCode == currentLocaleCode));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,name);
+int get hashCode => Object.hash(runtimeType,name,currentLocaleCode);
 
 @override
 String toString() {
-  return 'MoreViewModel(name: $name)';
+  return 'MoreViewModel(name: $name, currentLocaleCode: $currentLocaleCode)';
 }
 
 
@@ -241,7 +243,7 @@ abstract mixin class _$MoreViewModelCopyWith<$Res> implements $MoreViewModelCopy
   factory _$MoreViewModelCopyWith(_MoreViewModel value, $Res Function(_MoreViewModel) _then) = __$MoreViewModelCopyWithImpl;
 @override @useResult
 $Res call({
- String? name
+ String? name, String currentLocaleCode
 });
 
 
@@ -258,10 +260,11 @@ class __$MoreViewModelCopyWithImpl<$Res>
 
 /// Create a copy of MoreViewModel
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? name = freezed,}) {
+@override @pragma('vm:prefer-inline') $Res call({Object? name = freezed,Object? currentLocaleCode = null,}) {
   return _then(_MoreViewModel(
 name: freezed == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
-as String?,
+as String?,currentLocaleCode: null == currentLocaleCode ? _self.currentLocaleCode : currentLocaleCode // ignore: cast_nullable_to_non_nullable
+as String,
   ));
 }
 

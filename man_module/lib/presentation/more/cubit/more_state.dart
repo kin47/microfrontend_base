@@ -1,4 +1,4 @@
-part of 'more_bloc.dart';
+part of 'more_cubit.dart';
 
 @freezed
 abstract class MoreState with _$MoreState {
@@ -16,4 +16,8 @@ abstract class MoreState with _$MoreState {
     @Default(MoreViewModel()) MoreViewModel viewModel,
     @Default(BaseException()) BaseException exception,
   }) = _MoreStateError;
+
+  const factory MoreState.loggedOut({
+    @Default(MoreViewModel()) MoreViewModel viewModel,
+  }) = _MoreStateLoggedOut;
 }

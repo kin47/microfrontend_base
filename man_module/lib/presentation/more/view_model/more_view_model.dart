@@ -8,5 +8,6 @@ abstract class MoreViewModel with _$MoreViewModel {
   
   const factory MoreViewModel({
     @Default('') String? name,
+    @Default('en') String currentLocaleCode,
   }) = _MoreViewModel;
 }

@@ -1,4 +1,4 @@
-part of 'product_cubit.dart';
+part of 'product_bloc.dart';
 
 @freezed
 abstract class ProductState with _$ProductState {
