@@ -10,6 +10,6 @@ class BaseButton extends StatefulWidget {
 class _BaseButtonState extends State<BaseButton> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return ElevatedButton(onPressed: () {}, child: Text('Elevated Button'));
   }
 }
