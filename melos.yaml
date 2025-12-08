@@ -1,12 +1,13 @@
 name: microfrontend_base
 
 packages:
-  - flutter_libraries_module
-  - flutter_core_module
+  - flutter_base_libraries 
+  - flutter_core
   - ui_design_system
   - pom_module
   - man_module
   - printer_module
+  - ui_design_system
 
 scripts:
   ios:
@@ -28,10 +29,6 @@ scripts:
   # android_build_aar_development:
   #   description: Build android aar for development
   #   run: bash retail_man_flutter/update_android.sh && cd retail_man_flutter && flutter build aar --no-release --no-profile --no-tree-shake-icons --output "${PWD}/../kiotviet_android_manager/flutter-plugins"
-
-  flutter_pub_get:
-    description: Run flutter pub get on retail_man_flutter
-    run: cd retail_man_flutter && flutter pub get
 
   flutter_clean:
     description: Runs "flutter clean" in all Flutter packages

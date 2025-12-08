@@ -16,6 +16,7 @@ import '../application/module_registration/flutter_base_module_registration.dart
     as _i110;
 import '../module_definition.dart' as _i1042;
 import '../presentation/route/route.dart' as _i722;
+import '../presentation/screen/host/cubit/host_cubit.dart' as _i1065;
 
 // initializes the registration of main-scope dependencies inside of GetIt
 _i174.GetIt $initGetIt(
@@ -24,6 +25,7 @@ _i174.GetIt $initGetIt(
   _i526.EnvironmentFilter? environmentFilter,
 }) {
   final gh = _i526.GetItHelper(getIt, environment, environmentFilter);
+  gh.factory<_i1065.HostCubit>(() => _i1065.HostCubit());
   gh.lazySingleton<_i110.FlutterBaseModuleRegistration>(
     () => _i110.FlutterBaseModuleRegistrationImpl(),
   );

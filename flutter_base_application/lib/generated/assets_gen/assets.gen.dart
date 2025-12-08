@@ -134,42 +134,6 @@ class $AssetsSvgGen {
   SvgGenImage get icUserInactive =>
       const SvgGenImage('assets/svg/ic_user_inactive.svg');
 
-  /// File path: assets/svg/icon-16-arrowLeft.svg
-  SvgGenImage get icon16ArrowLeft =>
-      const SvgGenImage('assets/svg/icon-16-arrowLeft.svg');
-
-  /// File path: assets/svg/icon-16-arrowRight.svg
-  SvgGenImage get icon16ArrowRight =>
-      const SvgGenImage('assets/svg/icon-16-arrowRight.svg');
-
-  /// File path: assets/svg/icon-16-checkOff.svg
-  SvgGenImage get icon16CheckOff =>
-      const SvgGenImage('assets/svg/icon-16-checkOff.svg');
-
-  /// File path: assets/svg/icon-16-checkOn.svg
-  SvgGenImage get icon16CheckOn =>
-      const SvgGenImage('assets/svg/icon-16-checkOn.svg');
-
-  /// File path: assets/svg/icon-20-bellOff.svg
-  SvgGenImage get icon20BellOff =>
-      const SvgGenImage('assets/svg/icon-20-bellOff.svg');
-
-  /// File path: assets/svg/icon-20-bellOn.svg
-  SvgGenImage get icon20BellOn =>
-      const SvgGenImage('assets/svg/icon-20-bellOn.svg');
-
-  /// File path: assets/svg/icon-20-close.svg
-  SvgGenImage get icon20Close =>
-      const SvgGenImage('assets/svg/icon-20-close.svg');
-
-  /// File path: assets/svg/icon-28-checkBlank.svg
-  SvgGenImage get icon28CheckBlank =>
-      const SvgGenImage('assets/svg/icon-28-checkBlank.svg');
-
-  /// File path: assets/svg/icon-28-checkIdeal.svg
-  SvgGenImage get icon28CheckIdeal =>
-      const SvgGenImage('assets/svg/icon-28-checkIdeal.svg');
-
   /// List of all assets
   List<SvgGenImage> get values => [
     icArrowLeft,
@@ -200,15 +164,6 @@ class $AssetsSvgGen {
     icStoreInactive,
     icUserActive,
     icUserInactive,
-    icon16ArrowLeft,
-    icon16ArrowRight,
-    icon16CheckOff,
-    icon16CheckOn,
-    icon20BellOff,
-    icon20BellOn,
-    icon20Close,
-    icon28CheckBlank,
-    icon28CheckIdeal,
   ];
 }
 
