@@ -1,11 +1,13 @@
 import 'package:flutter_base_libraries/flutter_libraries.dart';
 import 'package:flutter_core/flutter_core.dart';
-import 'package:man_module/man_module.dart';
+import 'package:man_module/external/man_module.dart';
+import 'package:pom_module/external/pom_module.dart';
 
 ///______________________DEFINE MODULES HERE_____________________________
 ///
 List<BaseApplicationModule> _moduleDefinitions = <BaseApplicationModule>[
   ManModule(),
+  PomModule(),
 ];
 
 /// Where you can get a list of defined modules.

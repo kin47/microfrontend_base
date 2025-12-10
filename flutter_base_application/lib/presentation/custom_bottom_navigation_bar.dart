@@ -69,7 +69,7 @@ class ItemBottomNavigation extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            item.type.icon(isActive),
+            isActive ? item.type.activeIcon : item.type.icon,
             SizedBox(
               height: 8.h,
             ),

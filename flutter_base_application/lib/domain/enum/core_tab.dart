@@ -23,27 +23,33 @@ enum CoreTab {
     };
   }
 
-  Widget icon(bool isActive) {
+  Widget get icon {
     switch (this) {
       case CoreTab.home:
-        return (isActive ? Assets.svg.icLeafActive : Assets.svg.icLeafInactive)
-            .svg(width: 28.w);
+        return Assets.images.icDashboard.image(width: 28.w);
       case CoreTab.products:
-        return (isActive
-                ? Assets.svg.icDiagnoseActive
-                : Assets.svg.icDiagnoseInactive)
-            .svg(width: 28.w);
+        return Assets.images.icProduct.image(width: 28.w);
       case CoreTab.sale:
-        return (isActive
-                ? Assets.svg.icStoreActive
-                : Assets.svg.icStoreInactive)
-            .svg(width: 28.w);
+        return Assets.images.icSale.image(width: 28.w);
       case CoreTab.invoice:
-        return (isActive ? Assets.svg.icUserActive : Assets.svg.icUserInactive)
-            .svg(width: 28.w);
+        return Assets.images.icInvoice.image(width: 28.w);
       case CoreTab.more:
-        return (isActive ? Assets.svg.icUserActive : Assets.svg.icUserInactive)
-            .svg(width: 28.w);
+        return Assets.images.icMore.image(width: 28.w);
+    }
+  }
+
+  Widget get activeIcon {
+    switch (this) {
+      case CoreTab.home:
+        return Assets.images.icDashboardActive.image(width: 28.w);
+      case CoreTab.products:
+        return Assets.images.icProductActive.image(width: 28.w);
+      case CoreTab.sale:
+        return Assets.images.icSaleActive.image(width: 28.w);
+      case CoreTab.invoice:
+        return Assets.images.icInvoiceActive.image(width: 28.w);
+      case CoreTab.more:
+        return Assets.images.icMoreActive.image(width: 28.w);
     }
   }
 }

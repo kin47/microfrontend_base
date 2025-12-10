@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_core/flutter_core.dart';
+import 'package:man_module/presentation/invoice/screen/invoice_screen.dart';
 import 'package:man_module/presentation/more/screen/more_screen.dart';
 import 'package:man_module/presentation/product/screen/product_screen.dart';
 import 'package:man_module/routes/screen_name.dart';
@@ -29,18 +30,18 @@ RouteDefinition route = RouteDefinition(
             );
           }),
       ScreenRouteDefinition(
-          deepLink: ScreenName.more,
-          screen: (RouteSettings settings) {
-            return MaterialPageRoute(
-              builder: (BuildContext context) => MoreScreen(),
-              settings: settings,
-            );
-          }),
-      ScreenRouteDefinition(
           deepLink: ScreenName.product,
           screen: (RouteSettings settings) {
             return MaterialPageRoute(
               builder: (BuildContext context) => ProductScreen(),
+              settings: settings,
+            );
+          }),
+      ScreenRouteDefinition(
+          deepLink: ScreenName.invoice,
+          screen: (RouteSettings settings) {
+            return MaterialPageRoute(
+              builder: (BuildContext context) => const InvoiceScreen(),
               settings: settings,
             );
           }),

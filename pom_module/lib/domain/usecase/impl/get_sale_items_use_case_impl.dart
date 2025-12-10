@@ -4,7 +4,7 @@ import 'package:pom_module/domain/entity/sale_item_entity.dart';
 import 'package:pom_module/domain/repository/sale_repository.dart';
 import 'package:pom_module/domain/usecase/interface/get_sale_items_use_case.dart';
 
-@injectable
+@Injectable(as: GetSaleItemsUseCase)
 class GetSaleItemsUseCaseImpl implements GetSaleItemsUseCase {
   final SaleRepository _saleRepository;
 

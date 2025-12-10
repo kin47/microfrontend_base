@@ -52,4 +52,3 @@ flutter_gen:
     enabled: true
     outputs:
       class_name: Assets
-      package_parameter_enabled: true

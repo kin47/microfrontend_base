@@ -9,5 +9,9 @@ final GetIt getIt = GetIt.instance;
   preferRelativeImports: true, // default
   asExtension: false, // default
 )
-void configureDependencies({String env = Environment.dev}) =>
-    $initGetIt(getIt, environment: env);
+void configureDependencies({String env = Environment.dev}) {
+  getIt.registerLazySingleton<Dio>(
+    () => Dio(),
+  );
+  $initGetIt(getIt, environment: env);
+}

@@ -17,6 +17,51 @@ import 'package:vector_graphics/vector_graphics.dart' as _vg;
 class $AssetsImagesGen {
   const $AssetsImagesGen();
 
+  /// File path: assets/images/ic_bell.png
+  AssetGenImage get icBell => const AssetGenImage('assets/images/ic_bell.png');
+
+  /// File path: assets/images/ic_bell_active.png
+  AssetGenImage get icBellActive =>
+      const AssetGenImage('assets/images/ic_bell_active.png');
+
+  /// File path: assets/images/ic_dashboard.png
+  AssetGenImage get icDashboard =>
+      const AssetGenImage('assets/images/ic_dashboard.png');
+
+  /// File path: assets/images/ic_dashboard_active.png
+  AssetGenImage get icDashboardActive =>
+      const AssetGenImage('assets/images/ic_dashboard_active.png');
+
+  /// File path: assets/images/ic_invoice.png
+  AssetGenImage get icInvoice =>
+      const AssetGenImage('assets/images/ic_invoice.png');
+
+  /// File path: assets/images/ic_invoice_active.png
+  AssetGenImage get icInvoiceActive =>
+      const AssetGenImage('assets/images/ic_invoice_active.png');
+
+  /// File path: assets/images/ic_more.png
+  AssetGenImage get icMore => const AssetGenImage('assets/images/ic_more.png');
+
+  /// File path: assets/images/ic_more_active.png
+  AssetGenImage get icMoreActive =>
+      const AssetGenImage('assets/images/ic_more_active.png');
+
+  /// File path: assets/images/ic_product.png
+  AssetGenImage get icProduct =>
+      const AssetGenImage('assets/images/ic_product.png');
+
+  /// File path: assets/images/ic_product_active.png
+  AssetGenImage get icProductActive =>
+      const AssetGenImage('assets/images/ic_product_active.png');
+
+  /// File path: assets/images/ic_sale.png
+  AssetGenImage get icSale => const AssetGenImage('assets/images/ic_sale.png');
+
+  /// File path: assets/images/ic_sale_active.png
+  AssetGenImage get icSaleActive =>
+      const AssetGenImage('assets/images/ic_sale_active.png');
+
   /// File path: assets/images/loading.png
   AssetGenImage get loading => const AssetGenImage('assets/images/loading.png');
 
@@ -24,7 +69,22 @@ class $AssetsImagesGen {
   AssetGenImage get ptit => const AssetGenImage('assets/images/ptit.png');
 
   /// List of all assets
-  List<AssetGenImage> get values => [loading, ptit];
+  List<AssetGenImage> get values => [
+    icBell,
+    icBellActive,
+    icDashboard,
+    icDashboardActive,
+    icInvoice,
+    icInvoiceActive,
+    icMore,
+    icMoreActive,
+    icProduct,
+    icProductActive,
+    icSale,
+    icSaleActive,
+    loading,
+    ptit,
+  ];
 }
 
 class $AssetsSvgGen {
@@ -170,8 +230,6 @@ class $AssetsSvgGen {
 class Assets {
   const Assets._();
 
-  static const String package = 'flutter_base_application';
-
   static const $AssetsImagesGen images = $AssetsImagesGen();
   static const $AssetsSvgGen svg = $AssetsSvgGen();
 }
@@ -185,8 +243,6 @@ class AssetGenImage {
   });
 
   final String _assetName;
-
-  static const String package = 'flutter_base_application';
 
   final Size? size;
   final Set<String> flavors;
@@ -212,8 +268,7 @@ class AssetGenImage {
     bool matchTextDirection = false,
     bool gaplessPlayback = true,
     bool isAntiAlias = false,
-    @Deprecated('Do not specify package for a generated library asset')
-    String? package = package,
+    String? package,
     FilterQuality filterQuality = FilterQuality.medium,
     int? cacheWidth,
     int? cacheHeight,
@@ -246,17 +301,13 @@ class AssetGenImage {
     );
   }
 
-  ImageProvider provider({
-    AssetBundle? bundle,
-    @Deprecated('Do not specify package for a generated library asset')
-    String? package = package,
-  }) {
+  ImageProvider provider({AssetBundle? bundle, String? package}) {
     return AssetImage(_assetName, bundle: bundle, package: package);
   }
 
   String get path => _assetName;
 
-  String get keyName => 'packages/flutter_base_application/$_assetName';
+  String get keyName => _assetName;
 }
 
 class AssetGenImageAnimation {
@@ -283,14 +334,11 @@ class SvgGenImage {
   final Set<String> flavors;
   final bool _isVecFormat;
 
-  static const String package = 'flutter_base_application';
-
   _svg.SvgPicture svg({
     Key? key,
     bool matchTextDirection = false,
     AssetBundle? bundle,
-    @Deprecated('Do not specify package for a generated library asset')
-    String? package = package,
+    String? package,
     double? width,
     double? height,
     BoxFit fit = BoxFit.contain,
@@ -345,5 +393,5 @@ class SvgGenImage {
 
   String get path => _assetName;
 
-  String get keyName => 'packages/flutter_base_application/$_assetName';
+  String get keyName => _assetName;
 }

@@ -1,5 +1,4 @@
-import 'package:dio/dio.dart';
-import 'package:retrofit/retrofit.dart';
+import 'package:flutter_base_libraries/flutter_libraries.dart';
 import 'package:pom_module/data/dto/sale_item_dto.dart';
 
 part 'sale_api.g.dart';

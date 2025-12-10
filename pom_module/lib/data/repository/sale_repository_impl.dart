@@ -4,7 +4,7 @@ import 'package:pom_module/data/datasource/local/sale_store.dart';
 import 'package:pom_module/domain/entity/sale_item_entity.dart';
 import 'package:pom_module/domain/repository/sale_repository.dart';
 
-@injectable
+@Injectable(as: SaleRepository)
 class SaleRepositoryImpl implements SaleRepository {
   final SaleStore _saleStore;
 

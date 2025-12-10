@@ -2,7 +2,9 @@ import 'package:flutter_base_libraries/flutter_libraries.dart';
 
 import 'di.config.dart';
 
-GetIt getIt = GetIt.asNewInstance()..allowReassignment = true;
+/// Use the shared default GetIt instance so external modules see the same
+/// registrations (e.g. BaseLogger).
+GetIt getIt = GetIt.instance..allowReassignment = true;
 
 @InjectableInit(
   initializerName: r'$initGetIt',
@@ -10,5 +12,8 @@ GetIt getIt = GetIt.asNewInstance()..allowReassignment = true;
   asExtension: false,
 )
 Future<void> initDI() async {
-  await $initGetIt(getIt);
+  final SharedPreferences sharedPreferences =
+      await SharedPreferences.getInstance();
+  getIt.registerLazySingleton<SharedPreferences>(() => sharedPreferences);
+  $initGetIt(getIt);
 }

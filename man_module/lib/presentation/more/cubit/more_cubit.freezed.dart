@@ -95,11 +95,11 @@ extension MoreStatePatterns on MoreState {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>({TResult Function( _MoreStateInitial value)?  initial,TResult Function( _MoreStateLoading value)?  loading,TResult Function( _MoreStateError value)?  error,TResult Function( _MoreStateLoggedOut value)?  loggedOut,required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({TResult Function( _MoreStateInitial value)?  primary,TResult Function( _MoreStateLoading value)?  loading,TResult Function( _MoreStateError value)?  error,TResult Function( _MoreStateLoggedOut value)?  loggedOut,required TResult orElse(),}){
 final _that = this;
 switch (_that) {
-case _MoreStateInitial() when initial != null:
-return initial(_that);case _MoreStateLoading() when loading != null:
+case _MoreStateInitial() when primary != null:
+return primary(_that);case _MoreStateLoading() when loading != null:
 return loading(_that);case _MoreStateError() when error != null:
 return error(_that);case _MoreStateLoggedOut() when loggedOut != null:
 return loggedOut(_that);case _:
@@ -120,11 +120,11 @@ return loggedOut(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>({required TResult Function( _MoreStateInitial value)  initial,required TResult Function( _MoreStateLoading value)  loading,required TResult Function( _MoreStateError value)  error,required TResult Function( _MoreStateLoggedOut value)  loggedOut,}){
+@optionalTypeArgs TResult map<TResult extends Object?>({required TResult Function( _MoreStateInitial value)  primary,required TResult Function( _MoreStateLoading value)  loading,required TResult Function( _MoreStateError value)  error,required TResult Function( _MoreStateLoggedOut value)  loggedOut,}){
 final _that = this;
 switch (_that) {
 case _MoreStateInitial():
-return initial(_that);case _MoreStateLoading():
+return primary(_that);case _MoreStateLoading():
 return loading(_that);case _MoreStateError():
 return error(_that);case _MoreStateLoggedOut():
 return loggedOut(_that);case _:
@@ -144,11 +144,11 @@ return loggedOut(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>({TResult? Function( _MoreStateInitial value)?  initial,TResult? Function( _MoreStateLoading value)?  loading,TResult? Function( _MoreStateError value)?  error,TResult? Function( _MoreStateLoggedOut value)?  loggedOut,}){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>({TResult? Function( _MoreStateInitial value)?  primary,TResult? Function( _MoreStateLoading value)?  loading,TResult? Function( _MoreStateError value)?  error,TResult? Function( _MoreStateLoggedOut value)?  loggedOut,}){
 final _that = this;
 switch (_that) {
-case _MoreStateInitial() when initial != null:
-return initial(_that);case _MoreStateLoading() when loading != null:
+case _MoreStateInitial() when primary != null:
+return primary(_that);case _MoreStateLoading() when loading != null:
 return loading(_that);case _MoreStateError() when error != null:
 return error(_that);case _MoreStateLoggedOut() when loggedOut != null:
 return loggedOut(_that);case _:
@@ -168,10 +168,10 @@ return loggedOut(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({TResult Function( MoreViewModel viewModel)?  initial,TResult Function( MoreViewModel viewModel)?  loading,TResult Function( MoreViewModel viewModel,  BaseException exception)?  error,TResult Function( MoreViewModel viewModel)?  loggedOut,required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({TResult Function( MoreViewModel viewModel)?  primary,TResult Function( MoreViewModel viewModel)?  loading,TResult Function( MoreViewModel viewModel,  BaseException exception)?  error,TResult Function( MoreViewModel viewModel)?  loggedOut,required TResult orElse(),}) {final _that = this;
 switch (_that) {
-case _MoreStateInitial() when initial != null:
-return initial(_that.viewModel);case _MoreStateLoading() when loading != null:
+case _MoreStateInitial() when primary != null:
+return primary(_that.viewModel);case _MoreStateLoading() when loading != null:
 return loading(_that.viewModel);case _MoreStateError() when error != null:
 return error(_that.viewModel,_that.exception);case _MoreStateLoggedOut() when loggedOut != null:
 return loggedOut(_that.viewModel);case _:
@@ -192,10 +192,10 @@ return loggedOut(_that.viewModel);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>({required TResult Function( MoreViewModel viewModel)  initial,required TResult Function( MoreViewModel viewModel)  loading,required TResult Function( MoreViewModel viewModel,  BaseException exception)  error,required TResult Function( MoreViewModel viewModel)  loggedOut,}) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>({required TResult Function( MoreViewModel viewModel)  primary,required TResult Function( MoreViewModel viewModel)  loading,required TResult Function( MoreViewModel viewModel,  BaseException exception)  error,required TResult Function( MoreViewModel viewModel)  loggedOut,}) {final _that = this;
 switch (_that) {
 case _MoreStateInitial():
-return initial(_that.viewModel);case _MoreStateLoading():
+return primary(_that.viewModel);case _MoreStateLoading():
 return loading(_that.viewModel);case _MoreStateError():
 return error(_that.viewModel,_that.exception);case _MoreStateLoggedOut():
 return loggedOut(_that.viewModel);case _:
@@ -215,10 +215,10 @@ return loggedOut(_that.viewModel);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>({TResult? Function( MoreViewModel viewModel)?  initial,TResult? Function( MoreViewModel viewModel)?  loading,TResult? Function( MoreViewModel viewModel,  BaseException exception)?  error,TResult? Function( MoreViewModel viewModel)?  loggedOut,}) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>({TResult? Function( MoreViewModel viewModel)?  primary,TResult? Function( MoreViewModel viewModel)?  loading,TResult? Function( MoreViewModel viewModel,  BaseException exception)?  error,TResult? Function( MoreViewModel viewModel)?  loggedOut,}) {final _that = this;
 switch (_that) {
-case _MoreStateInitial() when initial != null:
-return initial(_that.viewModel);case _MoreStateLoading() when loading != null:
+case _MoreStateInitial() when primary != null:
+return primary(_that.viewModel);case _MoreStateLoading() when loading != null:
 return loading(_that.viewModel);case _MoreStateError() when error != null:
 return error(_that.viewModel,_that.exception);case _MoreStateLoggedOut() when loggedOut != null:
 return loggedOut(_that.viewModel);case _:
@@ -257,7 +257,7 @@ int get hashCode => Object.hash(runtimeType,viewModel);
 
 @override
 String toString() {
-  return 'MoreState.initial(viewModel: $viewModel)';
+  return 'MoreState.primary(viewModel: $viewModel)';
 }
 
 

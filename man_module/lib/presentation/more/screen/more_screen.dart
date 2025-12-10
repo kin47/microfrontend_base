@@ -3,7 +3,6 @@ import 'package:flutter/widget_previews.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:man_module/di/di.dart';
 import 'package:man_module/l10n/gen_file/app_localizations.dart';
-import 'package:man_module/main.dart' show MyAppExtension;
 import 'package:man_module/presentation/more/cubit/more_cubit.dart';
 import 'package:ui_design_system/screen_util/ds_screen_util.dart';
 
@@ -62,7 +61,7 @@ class _MoreScreenState extends State<MoreScreen> {
   }
 
   Widget _buildContent(BuildContext context) {
-    final localizations = AppLocalizations.of(context)!;
+    final localizations = AppLocalizations.of(context);
     final cubit = context.read<MoreCubit>();
     final currentLocale = Localizations.localeOf(context);
 
@@ -78,7 +77,7 @@ class _MoreScreenState extends State<MoreScreen> {
 
   Widget _buildLanguageSection(
     BuildContext context,
-    AppLocalizations localizations,
+    AppLocalizations? localizations,
     MoreCubit cubit,
     Locale currentLocale,
   ) {
@@ -90,7 +89,7 @@ class _MoreScreenState extends State<MoreScreen> {
           Padding(
             padding: const EdgeInsets.all(16.0),
             child: Text(
-              localizations.changeLanguage,
+              localizations?.changeLanguage ?? 'Change Language',
               style: Theme.of(context).textTheme.titleLarge?.copyWith(
                     fontWeight: FontWeight.bold,
                   ),
@@ -99,7 +98,7 @@ class _MoreScreenState extends State<MoreScreen> {
           const Divider(height: 1),
           ListTile(
             leading: const Icon(Icons.language),
-            title: Text(localizations.changeLanguage),
+            title: Text(localizations?.changeLanguage ?? 'Change Language'),
             subtitle: Text(_getLanguageName(currentLocale, localizations)),
             trailing: const Icon(Icons.chevron_right),
             onTap: () => _showLanguageDialog(context, cubit, localizations),
@@ -111,7 +110,7 @@ class _MoreScreenState extends State<MoreScreen> {
 
   Widget _buildLogoutSection(
     BuildContext context,
-    AppLocalizations localizations,
+    AppLocalizations? localizations,
     MoreCubit cubit,
   ) {
     return Card(
@@ -119,7 +118,7 @@ class _MoreScreenState extends State<MoreScreen> {
       child: ListTile(
         leading: const Icon(Icons.logout, color: Colors.red),
         title: Text(
-          localizations.logout,
+          localizations?.logout ?? 'Logout',
           style: const TextStyle(color: Colors.red),
         ),
         onTap: () => _showLogoutConfirmation(context, cubit, localizations),
@@ -130,7 +129,7 @@ class _MoreScreenState extends State<MoreScreen> {
   void _showLanguageDialog(
     BuildContext context,
     MoreCubit cubit,
-    AppLocalizations localizations,
+    AppLocalizations? localizations,
   ) {
     final supportedLocales = AppLocalizations.supportedLocales;
     final currentLocale = Localizations.localeOf(context);
@@ -138,7 +137,7 @@ class _MoreScreenState extends State<MoreScreen> {
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
-        title: Text(localizations.selectLanguage),
+        title: Text(localizations?.selectLanguage ?? 'Select Language123'),
         content: Column(
           mainAxisSize: MainAxisSize.min,
           children: supportedLocales.map((locale) {
@@ -148,15 +147,7 @@ class _MoreScreenState extends State<MoreScreen> {
               value: locale,
               groupValue: isSelected ? locale : null,
               onChanged: (selectedLocale) {
-                if (selectedLocale != null) {
-                  cubit.changeLanguage(selectedLocale);
-                  Navigator.of(context).pop();
-                  // Find the root MyApp state and update locale
-                  final appState = context.myAppState;
-                  if (appState != null && context.mounted) {
-                    appState.changeLocale(selectedLocale);
-                  }
-                }
+                /// TODO: Change app locale
               },
             );
           }).toList(),
@@ -174,12 +165,12 @@ class _MoreScreenState extends State<MoreScreen> {
   void _showLogoutConfirmation(
     BuildContext context,
     MoreCubit cubit,
-    AppLocalizations localizations,
+    AppLocalizations? localizations,
   ) {
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
-        title: Text(localizations.logout),
+        title: Text(localizations?.logout ?? 'Logout'),
         content: Text('Are you sure you want to logout?'),
         actions: [
           TextButton(
@@ -201,23 +192,16 @@ class _MoreScreenState extends State<MoreScreen> {
     );
   }
 
-  String _getLanguageName(Locale locale, AppLocalizations localizations) {
+  String _getLanguageName(Locale locale, AppLocalizations? localizations) {
     switch (locale.languageCode) {
       case 'en':
-        return localizations.english;
+        return localizations?.english ?? locale.languageCode ;
       case 'vi':
-        return localizations.vietnamese;
+        return localizations?.vietnamese ?? locale.languageCode;
       case 'ja':
-        return localizations.japanese;
+        return localizations?.japanese ?? locale.languageCode;
       default:
         return locale.languageCode;
     }
-  }
-}
-
-extension NullableExtension<T> on T? {
-  R? let<R>(R Function(T) function) {
-    final self = this;
-    return self == null ? null : function(self);
   }
 }

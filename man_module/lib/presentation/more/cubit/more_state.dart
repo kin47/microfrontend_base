@@ -4,7 +4,7 @@ part of 'more_cubit.dart';
 abstract class MoreState with _$MoreState {
   const MoreState._();
 
-  const factory MoreState.initial({
+  const factory MoreState.primary({
     @Default(MoreViewModel()) MoreViewModel viewModel,
   }) = _MoreStateInitial;
 

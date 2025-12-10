@@ -8,11 +8,11 @@ part 'more_cubit.freezed.dart';
 
 @injectable
 class MoreCubit extends Cubit<MoreState> {
-  MoreCubit() : super(const MoreState.initial());
+  MoreCubit() : super(const MoreState.primary());
 
   void changeLanguage(Locale locale) {
     final updatedViewModel = state.viewModel.copyWith(currentLocaleCode: locale.languageCode);
-    emit(MoreState.initial(viewModel: updatedViewModel));
+    emit(MoreState.primary(viewModel: updatedViewModel));
   }
 
   Future<void> logOut() async {

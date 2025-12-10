@@ -28,15 +28,15 @@ _i174.GetIt $initGetIt(
 }) {
   final gh = _i526.GetItHelper(getIt, environment, environmentFilter);
   gh.factory<_i194.SaleStore>(() => _i194.SaleStore());
-  gh.factory<_i597.SaleCubit>(
-    () => _i597.SaleCubit(gh<_i245.GetSaleItemsUseCase>()),
-  );
-  gh.factory<_i765.SaleRepositoryImpl>(
+  gh.factory<_i602.SaleRepository>(
     () => _i765.SaleRepositoryImpl(gh<_i194.SaleStore>()),
   );
   gh.lazySingleton<_i628.PomRoute>(() => _i628.PomRouteImpl());
-  gh.factory<_i497.GetSaleItemsUseCaseImpl>(
+  gh.factory<_i245.GetSaleItemsUseCase>(
     () => _i497.GetSaleItemsUseCaseImpl(gh<_i602.SaleRepository>()),
+  );
+  gh.factory<_i597.SaleCubit>(
+    () => _i597.SaleCubit(gh<_i245.GetSaleItemsUseCase>()),
   );
   return getIt;
 }

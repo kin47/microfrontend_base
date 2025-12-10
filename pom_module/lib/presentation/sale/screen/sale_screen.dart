@@ -35,7 +35,9 @@ class _SaleScreenState extends State<SaleScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return BlocProvider<SaleCubit>(
+      create: (context) => getIt<SaleCubit>(),
+      child: Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
         title: const Text('Sale Screen'),
@@ -237,7 +239,8 @@ class _SaleScreenState extends State<SaleScreen> {
           ),
         ],
       ),
-    );
+    ),
+);
   }
 }
 
