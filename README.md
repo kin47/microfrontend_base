@@ -18,7 +18,7 @@
   https://developer.android.com/studio/releases?hl=vi#android_gradle_plugin_and_android_studio_compatibility
 
 ## Flutter
-- Version: 3.35.7
+- Version: 3.38.3
 
 ## iOS
 - To be determined
@@ -30,10 +30,11 @@
 - You can run the Flutter module directly for easier debugging
 
 ## Project Structure
-- MicroFrontendAndroid: Where to start the project, contains Login Screen, and other modules that needs native handling
-- flutter_core_module: Handle the core of the Flutter, navigates between modules,...
+- microfrontend_android_host: Where to start the project, contains Login Screen, and other modules that needs native handling
+- flutter_base_application: Handle the core of the Flutter, draw the tab bar, navigates between modules,...
 - ui_design_system: Define the design, contains the design of default button, theme, textStyle, etc,..
-- flutter_libraries_modules: Define all the flutter packages needed for this microfrontend project
+- flutter_base_libraries: Define all the flutter packages needed for this microfrontend project
+- flutter_core: Define the core logic of the Flutter module, like Exception, Logger, Storage,...
 - pom_module: For the POS on Man module, this module will handle the sale/order flow, and it support offline-first
 - printer_module: This module will support the print and related settings
-- man_modules: This modules support the management product, other features,... and only support getting the data from Servers (APIs)
+- man_module: This modules support the management product, other features,... and only support getting the data from Servers (APIs)
