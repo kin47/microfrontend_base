@@ -5,9 +5,9 @@
 - Until now: Flutter Contains 3 sub-module
 
 ## Language/Framework Used
-- Android: Java, Kotlin (Jetpack Compose)
-- iOS: Swift (SwiftUI)
-- Flutter: Dart
+- Android: Kotlin (Jetpack Compose)
+- iOS: Swift (SwiftUI/UIKit)
+- Flutter: Dart (Supports Preview)
 
 ## Environment:
 ### Android
@@ -34,14 +34,27 @@
 - Using CocoaPods as a recommended approach based on docs.flutter.dev
 - Able to debug Flutter module using Flutter Attach, also quick update the Flutter UI/logic changes
 
-## Setup melos
+## Melos
+### About
+- This is a library that supports managing mono-repo gracefully
+- Melos also works great on CI/CD environments to help automate complex tasks and challenges.
+
+### Current Version
+7.3.0
+
+### Documentation
+- Pub.dev: https://pub.dev/packages/melos
+- Intaverse: https://melos.invertase.dev/~melos-latest
+
+### Setup melos
 - dart pub global activate melos
 - echo 'export PATH="$PATH":"$HOME/.pub-cache/bin"' >> ~/.zshrc
 - source ~/.zshrc
 
 ## Project Structure
-- microfrontend_android_host: Where to start the project, contains Login Screen, and other modules that needs native handling
-- flutter_base_application: Handle the core of the Flutter, draw the tab bar, navigates between modules,...
+- microfrontend_android_host: Where to start the project from Native Android, contains Login Screen, and other modules that needs native handling
+- microfrontend_ios_host: Where to start the project from Native iOS, contains Login Screen, and other modules that needs native handling
+- flutter_base_application: Handle the starting point of the Flutter app, draw the tab bar, navigates between modules,...
 - ui_design_system: Define the design, contains the design of default button, theme, textStyle, etc,..
 - flutter_base_libraries: Define all the flutter packages needed for this microfrontend project
 - flutter_core: Define the core logic of the Flutter module, like Exception, Logger, Storage,...
