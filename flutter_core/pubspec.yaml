@@ -1,6 +1,7 @@
 name: flutter_core
 description: "A Module that contains core functionality for Flutter applications."
 publish_to: "none"
+resolution: workspace
 
 version: 1.0.0+1
 

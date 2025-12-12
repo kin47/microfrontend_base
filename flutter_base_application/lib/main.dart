@@ -14,6 +14,8 @@ import 'core.dart';
 @pragma('vm:entry-point')
 Future<void> startApplication() async {
   setup();
+  await init();
+  runApp(const FlutterBaseApplicationApp());
 }
 
 Future<void> main() async {

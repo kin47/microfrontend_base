@@ -9,6 +9,7 @@ import SwiftUI
 
 struct LoginUIView: View {
     @StateObject private var viewModel: LoginViewModel
+    @State private var navigateToFlutter = false
 
     init(viewModel: LoginViewModel = LoginUIView.makeDefaultViewModel()) {
         _viewModel = StateObject(wrappedValue: viewModel)
@@ -49,7 +50,9 @@ struct LoginUIView: View {
                         .frame(maxWidth: .infinity, alignment: .leading)
                 }
 
-                Button(action: viewModel.login) {
+                Button(action: {
+                    viewModel.login()
+                }) {
                     HStack {
                         if viewModel.isLoading {
                             ProgressView()
@@ -81,6 +84,17 @@ struct LoginUIView: View {
                 }
             }
             .padding()
+            .navigationDestination(isPresented: $navigateToFlutter) {
+                if let session = viewModel.session {
+                    FlutterView(authToken: session.token)
+                        .navigationBarBackButtonHidden(true)
+                }
+            }
+            .onChange(of: viewModel.isLoggedIn) { oldValue, newValue in
+                if newValue {
+                    navigateToFlutter = true
+                }
+            }
         }
     }
 

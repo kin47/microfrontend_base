@@ -1,6 +1,7 @@
 name: pom_module
 description: "A module to manage Point of Sale (POM) features"
 publish_to: none
+resolution: workspace
 
 version: 1.0.0+1
 

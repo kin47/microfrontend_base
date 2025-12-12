@@ -1,0 +1,27 @@
+# Uncomment this line to define a global platform for your project
+platform :ios, '13.0'
+deployment_target = '13.0'
+# CocoaPods analytics sends network stats synchronously affecting flutter build latency.
+ENV['COCOAPODS_DISABLE_STATS'] = 'true'
+
+project 'microfrontend_ios_host.xcodeproj'
+
+flutter_application_path = '../flutter_base_application'
+load File.join(flutter_application_path, '.ios', 'Flutter', 'podhelper.rb')
+
+target 'microfrontend_ios_host' do
+  use_frameworks!
+  use_modular_headers!
+
+  install_all_flutter_pods(flutter_application_path)
+end
+
+post_install do |installer|
+  flutter_post_install(installer) if defined?(flutter_post_install)
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '13.0'
+    end
+  end
+end
+

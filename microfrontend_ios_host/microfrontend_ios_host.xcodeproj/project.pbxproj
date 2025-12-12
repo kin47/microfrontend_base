@@ -24,6 +24,9 @@
 		AB97222B2EEB1A48002C8EC2 /* AuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9722252EEB1A48002C8EC2 /* AuthRepository.swift */; };
 		AB97222C2EEB1A48002C8EC2 /* UserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9722272EEB1A48002C8EC2 /* UserSession.swift */; };
 		AB9722302EEB1AFC002C8EC2 /* AuthResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB97222F2EEB1AFC002C8EC2 /* AuthResponseDTO.swift */; };
+		AB9722482EEC8C5F002C8EC2 /* FlutterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9722452EEC8C5F002C8EC2 /* FlutterView.swift */; };
+		AB9722492EEC8C5F002C8EC2 /* FlutterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9722462EEC8C5F002C8EC2 /* FlutterViewController.swift */; };
+		E556FA8D6276B68639C4F06D /* Pods_microfrontend_ios_host.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5656E64460E55030D88B95DE /* Pods_microfrontend_ios_host.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		335440587505FAA5B2F25A47 /* Pods-microfrontend_ios_host.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-microfrontend_ios_host.release.xcconfig"; path = "Target Support Files/Pods-microfrontend_ios_host/Pods-microfrontend_ios_host.release.xcconfig"; sourceTree = "<group>"; };
+		5656E64460E55030D88B95DE /* Pods_microfrontend_ios_host.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_microfrontend_ios_host.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DC15B043FD40215B7943BDB /* Pods-microfrontend_ios_host.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-microfrontend_ios_host.debug.xcconfig"; path = "Target Support Files/Pods-microfrontend_ios_host/Pods-microfrontend_ios_host.debug.xcconfig"; sourceTree = "<group>"; };
 		AB9721D62EEB1294002C8EC2 /* microfrontend_ios_host.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = microfrontend_ios_host.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB9721D92EEB1294002C8EC2 /* microfrontend_ios_hostApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = microfrontend_ios_hostApp.swift; sourceTree = "<group>"; };
 		AB9721DB2EEB1294002C8EC2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -64,6 +70,8 @@
 		AB9722252EEB1A48002C8EC2 /* AuthRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthRepository.swift; sourceTree = "<group>"; };
 		AB9722272EEB1A48002C8EC2 /* UserSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSession.swift; sourceTree = "<group>"; };
 		AB97222F2EEB1AFC002C8EC2 /* AuthResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResponseDTO.swift; sourceTree = "<group>"; };
+		AB9722452EEC8C5F002C8EC2 /* FlutterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlutterView.swift; sourceTree = "<group>"; };
+		AB9722462EEC8C5F002C8EC2 /* FlutterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlutterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E556FA8D6276B68639C4F06D /* Pods_microfrontend_ios_host.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +107,8 @@
 				AB9721E92EEB1295002C8EC2 /* microfrontend_ios_hostTests */,
 				AB9721F32EEB1295002C8EC2 /* microfrontend_ios_hostUITests */,
 				AB9721D72EEB1294002C8EC2 /* Products */,
+				CB614C69351C3113F4B18969 /* Pods */,
+				F5D3E616FFC1C90C7E5EFBA2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -153,6 +164,7 @@
 		AB9722102EEB1827002C8EC2 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				AB9722472EEC8C5F002C8EC2 /* Flutter */,
 				AB9722142EEB186E002C8EC2 /* Register */,
 				AB9722132EEB1867002C8EC2 /* Login */,
 			);
@@ -253,6 +265,33 @@
 			path = Response;
 			sourceTree = "<group>";
 		};
+		AB9722472EEC8C5F002C8EC2 /* Flutter */ = {
+			isa = PBXGroup;
+			children = (
+				AB9722452EEC8C5F002C8EC2 /* FlutterView.swift */,
+				AB9722462EEC8C5F002C8EC2 /* FlutterViewController.swift */,
+			);
+			path = Flutter;
+			sourceTree = "<group>";
+		};
+		CB614C69351C3113F4B18969 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8DC15B043FD40215B7943BDB /* Pods-microfrontend_ios_host.debug.xcconfig */,
+				335440587505FAA5B2F25A47 /* Pods-microfrontend_ios_host.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F5D3E616FFC1C90C7E5EFBA2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5656E64460E55030D88B95DE /* Pods_microfrontend_ios_host.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -260,9 +299,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AB9721FA2EEB1295002C8EC2 /* Build configuration list for PBXNativeTarget "microfrontend_ios_host" */;
 			buildPhases = (
+				6D78DCA4BE6E86D4C2550404 /* [CP] Check Pods Manifest.lock */,
+				03267F4BA711F5A54F44FFE9 /* [CP-User] Run Flutter Build flutter_base_application Script */,
 				AB9721D22EEB1294002C8EC2 /* Sources */,
 				AB9721D32EEB1294002C8EC2 /* Frameworks */,
 				AB9721D42EEB1294002C8EC2 /* Resources */,
+				A8986511FF435E6592A772AE /* [CP] Embed Pods Frameworks */,
+				B5DBEB11B7A1082993054606 /* [CP-User] Embed Flutter Build flutter_base_application Script */,
 			);
 			buildRules = (
 			);
@@ -378,13 +421,77 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		03267F4BA711F5A54F44FFE9 /* [CP-User] Run Flutter Build flutter_base_application Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "[CP-User] Run Flutter Build flutter_base_application Script";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\nset -u\nsource \"${SRCROOT}/../flutter_base_application/.ios/Flutter/flutter_export_environment.sh\"\nexport VERBOSE_SCRIPT_LOGGING=1 && \"$FLUTTER_ROOT\"/packages/flutter_tools/bin/xcode_backend.sh build";
+		};
+		6D78DCA4BE6E86D4C2550404 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-microfrontend_ios_host-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A8986511FF435E6592A772AE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-microfrontend_ios_host/Pods-microfrontend_ios_host-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-microfrontend_ios_host/Pods-microfrontend_ios_host-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-microfrontend_ios_host/Pods-microfrontend_ios_host-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B5DBEB11B7A1082993054606 /* [CP-User] Embed Flutter Build flutter_base_application Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "[CP-User] Embed Flutter Build flutter_base_application Script";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\nset -u\nsource \"${SRCROOT}/../flutter_base_application/.ios/Flutter/flutter_export_environment.sh\"\nexport VERBOSE_SCRIPT_LOGGING=1 && \"$FLUTTER_ROOT\"/packages/flutter_tools/bin/xcode_backend.sh embed_and_thin";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AB9721D22EEB1294002C8EC2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				AB9722162EEB187B002C8EC2 /* RegisterUIView.swift in Sources */,
+				AB9722482EEC8C5F002C8EC2 /* FlutterView.swift in Sources */,
 				AB97221D2EEB1A1F002C8EC2 /* AuthRepositoryImpl.swift in Sources */,
+				AB9722492EEC8C5F002C8EC2 /* FlutterViewController.swift in Sources */,
 				AB9721DC2EEB1294002C8EC2 /* ContentView.swift in Sources */,
 				AB97222B2EEB1A48002C8EC2 /* AuthRepository.swift in Sources */,
 				AB9722182EEB1889002C8EC2 /* LoginUIView.swift in Sources */,
@@ -468,7 +575,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -531,7 +638,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -552,6 +659,7 @@
 		};
 		AB9721FB2EEB1295002C8EC2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8DC15B043FD40215B7943BDB /* Pods-microfrontend_ios_host.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -580,6 +688,7 @@
 		};
 		AB9721FC2EEB1295002C8EC2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 335440587505FAA5B2F25A47 /* Pods-microfrontend_ios_host.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

@@ -1,6 +1,7 @@
 name: flutter_base_libraries
 description: "A module that contains all the Flutter libraries in need for this Flutter Project"
 publish_to: none
+resolution: workspace
 
 version: 1.0.0+1
 

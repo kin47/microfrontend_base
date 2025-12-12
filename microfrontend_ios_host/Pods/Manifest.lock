@@ -1,0 +1,67 @@
+PODS:
+  - connectivity_plus (0.0.1):
+    - Flutter
+  - Flutter (1.0.0)
+  - flutter_secure_storage (6.0.0):
+    - Flutter
+  - FlutterPluginRegistrant (0.0.1):
+    - connectivity_plus
+    - Flutter
+    - flutter_secure_storage
+    - path_provider_foundation
+    - share_plus
+    - shared_preferences_foundation
+    - sqflite_darwin
+  - path_provider_foundation (0.0.1):
+    - Flutter
+    - FlutterMacOS
+  - share_plus (0.0.1):
+    - Flutter
+  - shared_preferences_foundation (0.0.1):
+    - Flutter
+    - FlutterMacOS
+  - sqflite_darwin (0.0.4):
+    - Flutter
+    - FlutterMacOS
+
+DEPENDENCIES:
+  - connectivity_plus (from `../flutter_base_application/.ios/.symlinks/plugins/connectivity_plus/ios`)
+  - Flutter (from `../flutter_base_application/.ios/Flutter`)
+  - flutter_secure_storage (from `../flutter_base_application/.ios/.symlinks/plugins/flutter_secure_storage/ios`)
+  - FlutterPluginRegistrant (from `../flutter_base_application/.ios/Flutter/FlutterPluginRegistrant`)
+  - path_provider_foundation (from `../flutter_base_application/.ios/.symlinks/plugins/path_provider_foundation/darwin`)
+  - share_plus (from `../flutter_base_application/.ios/.symlinks/plugins/share_plus/ios`)
+  - shared_preferences_foundation (from `../flutter_base_application/.ios/.symlinks/plugins/shared_preferences_foundation/darwin`)
+  - sqflite_darwin (from `../flutter_base_application/.ios/.symlinks/plugins/sqflite_darwin/darwin`)
+
+EXTERNAL SOURCES:
+  connectivity_plus:
+    :path: "../flutter_base_application/.ios/.symlinks/plugins/connectivity_plus/ios"
+  Flutter:
+    :path: "../flutter_base_application/.ios/Flutter"
+  flutter_secure_storage:
+    :path: "../flutter_base_application/.ios/.symlinks/plugins/flutter_secure_storage/ios"
+  FlutterPluginRegistrant:
+    :path: "../flutter_base_application/.ios/Flutter/FlutterPluginRegistrant"
+  path_provider_foundation:
+    :path: "../flutter_base_application/.ios/.symlinks/plugins/path_provider_foundation/darwin"
+  share_plus:
+    :path: "../flutter_base_application/.ios/.symlinks/plugins/share_plus/ios"
+  shared_preferences_foundation:
+    :path: "../flutter_base_application/.ios/.symlinks/plugins/shared_preferences_foundation/darwin"
+  sqflite_darwin:
+    :path: "../flutter_base_application/.ios/.symlinks/plugins/sqflite_darwin/darwin"
+
+SPEC CHECKSUMS:
+  connectivity_plus: 2a701ffec2c0ae28a48cf7540e279787e77c447d
+  Flutter: cabc95a1d2626b1b06e7179b784ebcf0c0cde467
+  flutter_secure_storage: d33dac7ae2ea08509be337e775f6b59f1ff45f12
+  FlutterPluginRegistrant: 9a087a5df6a8bccb7119cdc0b1a48b7c0eac0fc4
+  path_provider_foundation: 0b743cbb62d8e47eab856f09262bb8c1ddcfe6ba
+  share_plus: 8b6f8b3447e494cca5317c8c3073de39b3600d1f
+  shared_preferences_foundation: 5086985c1d43c5ba4d5e69a4e8083a389e2909e6
+  sqflite_darwin: 5a7236e3b501866c1c9befc6771dfd73ffb8702d
+
+PODFILE CHECKSUM: 6b277ca9858c9dc6ac69385785059cb5db520c49
+
+COCOAPODS: 1.16.2

@@ -1,5 +1,6 @@
 name: flutter_base_application
 description: "A new Flutter module project."
+resolution: workspace
 
 version: 1.0.0+1
 

@@ -1,6 +1,7 @@
 name: man_module
 description: "A module to manage all other features that is not related to sales"
 publish_to: none
+resolution: workspace
 
 version: 1.0.0+1
 
